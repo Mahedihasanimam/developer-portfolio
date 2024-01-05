@@ -18,9 +18,36 @@
   text-transform: capitalize;
   padding: 15px 35px;
 }
-
+.primary-h3 {
+  color: #181818;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+.primary-p {
+  color: #757575;
+  text-align: center;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 16px;
+  width: 66%;
+  margin: auto;
+}
+.btn-sec {
+  border-radius: 5px;
+  background: #fff8f3;
+  border: none;
+  color: #fd6e0a;
+  border: 1px solid #fd6e0a;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 15px 35px;
+  margin: 50px 30px;
+}
 .navigation {
-    padding: 50px 100px;
+  padding: 50px 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,4 +72,80 @@ nav li a {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
+}
+/* navigation close */
+
+/* banner start  */
+header {
+  background: #fff8f3;
+  background: url(../images/header_bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  margin-bottom: 100px;
+}
+.banner {
+  padding: 35px 35px 0px 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bnner-text h3 {
+  color: #474747;
+  font-size: 45px;
+  font-weight: 600;
+}
+.bnner-text h1 {
+  color: #181818;
+  font-size: 85px;
+  font-weight: 700;
+}
+.bnner-text p {
+  color: #757575;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+}
+.banner img {
+  height: 676px;
+}
+
+/* about section  */
+.about-us {
+  width: 1140px;
+  padding: 50px 50px;
+  border-radius: 10px;
+  background: #fff8f3;
+  margin: auto;
+  text-align: center;
+}
+.about-info-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+.service-section {
+  width: 1140px;
+  margin: 100px auto;
+}
+.service {
+  padding: 30px;
+  width: 200px;
+  height: 377px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+}
+.service p{
+    line-height: 30px;
+}
+.service img{
+    padding-bottom: 15px;
+}
+.service h4{
+    padding: 30px 0px;
+}
+.service-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0px;
 }
