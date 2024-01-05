@@ -78,9 +78,9 @@ nav li a {
 /* banner start  */
 header {
   background: #fff8f3;
-  background: url(../images/header_bg.png);
+  background: url('../images/header_bg.png'),url('../images/developer.png');
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom right,left bottom;
   margin-bottom: 100px;
 }
 .banner {
@@ -222,7 +222,7 @@ footer {
     border: none;
     outline: none;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 35px;
     margin-top: 15px;
 }
 .bottom-footer{
