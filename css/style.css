@@ -17,6 +17,32 @@
   font-weight: 700;
   text-transform: capitalize;
   padding: 15px 35px;
+  transition: 0.5s;
+}
+.btn-primary a{
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn-sec a{
+  text-decoration: none;
+  color: #fd6e0a;
+}
+.btn-primary:hover{
+  cursor: pointer;
+  background: #fff8f3;
+  color: #fd6e0a;
+  border: 1px solid #fd6e0a;
+}
+.btn-primary:hover a{
+  color: #fd6e0a;
+}
+.btn-sec:hover{
+  cursor: pointer;
+  background: #fd6e0a;
+}
+.btn-sec:hover a{
+  color: #ffff;
 }
 .primary-h3 {
   color: #181818;
@@ -45,6 +71,7 @@
   text-transform: capitalize;
   padding: 15px 35px;
   margin: 50px 30px;
+  transition: .5s;
 }
 .navigation {
   padding: 50px 150px;
@@ -64,23 +91,32 @@ nav > ul {
 nav li {
   list-style: none;
   margin-right: 50px;
+ 
 }
 nav li a {
   text-decoration: none;
   color: #474747;
-
+  transition: 0.5s;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
+}
+ul li>a:hover{
+  background-color: #fd6e0a;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.navigation ul li:hover a{
+  color: #ffff;
 }
 /* navigation close */
 
 /* banner start  */
 header {
   background: #fff8f3;
-  background: url('../images/header_bg.png'),url('../images/developer.png');
+  background: url("../images/header_bg.png"), url("../images/developer.png");
   background-repeat: no-repeat;
-  background-position: bottom right,left bottom;
+  background-position: bottom right, left bottom;
   margin-bottom: 100px;
 }
 .banner {
@@ -111,12 +147,13 @@ header {
 
 /* about section  */
 .about-us {
-  width: 1140px;
+  max-width:1140px;
   padding: 50px 50px;
   border-radius: 10px;
   background: #fff8f3;
   margin: auto;
   text-align: center;
+  overflow: hidden;
 }
 .about-info-container {
   display: flex;
@@ -124,7 +161,7 @@ header {
   padding-top: 60px;
 }
 .service-section {
-  width: 1140px;
+  max-width: 1140px;
   margin: 100px auto;
   padding: 0 100px;
 }
@@ -154,7 +191,7 @@ header {
 .resume-container {
   display: flex;
   gap: 50px;
-  width: 1140px;
+  max-width: 1140px;
   /* width: 75%; */
   margin: 100px auto 50px auto;
   padding: 0px 100px;
@@ -192,12 +229,14 @@ header {
 footer {
   background: #fff8f3;
 }
+
 .footer-container {
   padding: 100px 150px;
-  width: 1140px;
+  max-width: 1140px;
   display: flex;
   justify-content: space-between;
   margin: auto;
+  background: #fff8f3;
 }
 .footer-column h3 {
   color: #181818;
@@ -217,18 +256,118 @@ footer {
   width: 24px;
   height: 24px;
 }
-.footer-column input,textarea{
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    padding: 20px 35px;
-    margin-top: 15px;
+.footer-column input,
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 20px 35px;
+  margin-top: 15px;
 }
-.bottom-footer{
-    background-color: #181818;
-    padding: 10px;
+/* responsive css */
+
+/* small device  */
+@media screen and (max-width: 575px) {
+  .navigation,
+  nav > ul,
+  .banner,
+  .about-info-container,
+  .service-container,.resume-container,.footer-container {
+    flex-direction: column;
+  }
+  nav > ul li {
+    margin-bottom: 10px;
+  }
+  header {
+    background: none;
+  }
+  .banner img {
+    border: 10px solid #fd6e0a;
     margin: auto;
-    color: #fff;
-    text-align: center;
+    border-radius: 100%;
+    width: 100%;
+    height: auto;
+  }
+  .resume-container,.service-section{
+    padding: 0px 20px;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  .bnner-text h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .banner-text h3{
+    font-size: 25px;
+  }
+  .about-us{
+    text-align:center;
+    padding: 0px 20px;
+  }
+  .about-info {
+    padding: 10px;
+  }
+  .primary-p{
+    width: 100%;
+  }
+  .footer-container{
+    padding: 100px 20px;
+  }
+  .footer-column{
+    padding: 10px 0;
+  }
+  .footer-column input,textarea{
+    width: 80%;
+  }
+  .btn-sec,.btn-primary{
+    margin: 20px 0px;
+  }
+}
+@media screen and (min-width:575px) and (max-width:992px) {
+  .navigation,.banner,
+  .about-info-container,
+  .service-container,.resume-container,.footer-container {
+    flex-direction: column;
+  }
+  img{
+    max-width: 100%;
+  }
+  .btn-sec,.btn-primary{
+    margin: 20px 0px;
+  }
+  header {
+    background: none;
+  }
+  .banner,.about-info {
+    padding: 20px;
+  }
+  .banner{
+    align-items: start;
+  }
+  .banner-text h3{
+    font-size: 10px;
+    font-weight: 300;
+  }
+  .navigation{
+    padding: 50px 0px;
+
+  }
+  .about-info-container{
+    text-align: start;
+  }
+  .resume-container,.service-section{
+    padding: 0px 20px;
+  }
+  .footer-container{
+    padding: 100px 20px;
+  }
+  .footer-column input,textarea{
+    width: 80%;
+  }
+  .footer-column{
+    padding: 10px 0;
+  }
 }
